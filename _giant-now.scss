@@ -1,0 +1,94 @@
+.svg-giant {
+	width: 2rem;
+	height: 2rem;
+	float: left;
+	padding: 1rem;
+	background: rgba(128, 128, 128, 0.3);
+}
+
+.svg-giant {
+	fill: rgba(128, 128, 128, 0.3);
+	stroke-width: 10px;
+	stroke: rgba(128, 128, 128, 0.8);
+}
+
+.svg-android {
+	stroke-width: 2px;
+}
+
+.giant-now-item:hover .svg-giant {
+	fill: url(#linear-gradient);
+}
+
+.giant-now {
+	background: $baseGradient;
+	&-head {
+		@include Dosis(300, 2rem);
+		text-align: center;
+		color: #fff;
+		padding: 2rem 0 1rem;
+	}
+	&-wrap {
+		@include centro(90%, 1200px);
+		height: 8rem;
+	}
+	&-item {
+		display: inline-block;
+		width: 25%;
+		min-width: 14rem;
+		height: 4rem;
+		text-decoration: none;
+		background: #fff;
+		color: #000;
+		margin: 0 2.5% 1rem;
+		&:hover {
+			-webkit-box-shadow: 0 5px 15px 0 #000;
+			box-shadow: 0 5px 15px 0 #000;
+		}
+	}
+	&-div {
+		width: 64%;
+		padding-top: 0.5rem;
+		float: right;
+		text-align: left;
+		&-head {
+			@include Dosis(600, 1rem);
+		}
+		&-txt {
+			@include Roboto(300, 0.6rem);
+		}
+	}
+}
+
+@supports (display: flex) {
+	.giant-now-wrap {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-pack: distribute;
+		justify-content: space-between;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.giant-now-item {
+		margin: 0 0 1rem 0;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.giant-now-wrap {
+		text-align: center;
+		height: auto;
+	}
+	@supports (display: flex) {
+		.giant-now-wrap {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-pack: distribute;
+			justify-content: space-around;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
+	}
+}

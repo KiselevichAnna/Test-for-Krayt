@@ -1,0 +1,97 @@
+.jump {
+	&-part {
+		width: 30%;
+		&::before {
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			border-radius: 50%;
+			content: "\f02c";
+			color: #ff3366;
+			border: 1px solid rgba(128, 128, 128, 0.1);
+			padding: 1.1rem;
+			position: absolute;
+		}
+	}
+	&-head {
+		padding: 0 0 0.4rem 80px;
+		@include Dosis(500, 1rem);
+	}
+	&-text {
+		padding-left: 80px;
+		@include Roboto(300, 0.7rem);
+		color: rgba(128, 128, 128, 0.5);
+		line-height: 1.5;
+	}
+}
+
+.jump-part:nth-child(2)::before {
+	content: "\f013";
+}
+
+.jump-part:nth-child(3)::before {
+	content: "\f1fc";
+}
+
+.jump-part:nth-child(4)::before {
+	content: "\f134";
+}
+
+.jump-part:nth-child(5)::before {
+	content: "\f15c";
+}
+
+.jump-part:nth-child(6)::before {
+	content: '\f1e3';
+}
+
+.jump {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 108px;
+}
+
+.jump-part {
+	width: 25%;
+	display: inline-block;
+	padding-bottom: 65px;
+	vertical-align: top;
+}
+
+.jump::after {
+	display: block;
+	width: 80%;
+	content: '';
+	color: rgba(128, 128, 128, 0.5);
+	margin: 100px auto;
+	height: 3px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ece5e5));
+	background: -webkit-linear-gradient(top, #fff, #ece5e5);
+	background: -o-linear-gradient(top, #fff, #ece5e5);
+	background: linear-gradient(to bottom, #fff, #ece5e5);
+}
+
+@supports (display: flex) {
+	.jump {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.jump-part {
+		display: block;
+		width: 30%;
+		min-width: 250px;
+	}
+	@media screen and (max-width: 750px) {
+	
+		.jump {
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+		}
+	}
+}

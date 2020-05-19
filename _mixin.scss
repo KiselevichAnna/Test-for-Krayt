@@ -1,0 +1,84 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 19px;
+	list-style-type: none;
+	-webkit-transition: all 250ms linear;
+	-o-transition: all 250ms linear;
+	transition: all 250ms linear;
+}
+
+
+$baseGradient: linear-gradient(to right, #ff6633, #ff3366);
+$baseBlue: lighten(#ccccff, 4%);
+$baseGrey :rgba(128, 128, 128, 0.3);
+@mixin centro($width, $maxWidth) {
+	width: $width;
+	max-width: $maxWidth;
+	margin: 0 auto;
+}
+
+
+
+@mixin link {
+	text-decoration: none;
+	color: #fff;
+}
+
+@mixin Roboto($fw, $fz) {
+	font-family: 'Roboto', sans-serif;
+	font-weight: $fw;
+	font-size: $fz;
+}
+
+@mixin Dosis($fw, $fz) {
+	font-family: 'Dosis', sans-serif;
+	font-weight: $fw;
+	font-size: $fz;
+}
+
+
+
+@mixin sizer($w, $h, $m) {
+	display: block;
+	position: absolute;
+	width: $w;
+	height: $h;
+	margin-top: $m;
+	top: 3rem;
+	left: 46%;
+	-webkit-box-shadow: 0 10px 15px 0px darken(#cccccc, 30%), 10px 0px 15px 0px darken(#cccccc, 30%);
+	box-shadow: 0 10px 15px 0px darken(#cccccc, 30%), 10px 0px 15px 0px darken(#cccccc, 30%);
+}
+
+.link {
+	@include link;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+
+  .to-top {
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    padding: 5px;
+    z-index: 12; 
+    position: fixed;
+    right: 1%;
+    bottom: 2%;
+    color: rgba(128, 128, 128, 0.6);
+    border-radius: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    text-align: center;
+    }
+  .to-top>.fas{
+    font-size: 3rem;
+  }
+    .to-top:hover {
+      background: $baseGradient;
+    }

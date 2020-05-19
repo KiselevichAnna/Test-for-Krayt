@@ -1,0 +1,123 @@
+.order {
+	&-wrap {
+		@include centro(80%, 1200px);
+		margin-bottom: 100px;
+	}
+	&-item {
+		display: inline-block;
+		width: 260px;
+		margin: 15px 3px;
+		background: $baseBlue;
+		@include Dosis(400, 1rem);
+		text-align: center;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	&-head {
+		font-weight: bolder;
+		padding: 0.5rem 0;
+	}
+	&-five-corner {
+		height: 107px;
+		width: 260px;
+		position: relative;
+		background: #fff;
+	}
+	&-five-corner:after {
+		content: "";
+		height: 0;
+		width: 0;
+		position: absolute;
+		left: 0;
+		bottom: -1px;
+		border-bottom: 30px solid #e0e0ff;
+		border-right: 130px solid transparent;
+	}
+	&-five-corner:before {
+		content: "";
+		height: 0;
+		width: 0;
+		position: absolute;
+		left: 130px;
+		bottom: -1px;
+		border-bottom: 30px solid #e0e0ff;
+		border-left: 130px solid transparent;
+	}
+	&-price {
+		@include Dosis(500, 2rem);
+		vertical-align: middle;
+		position: relative;
+		top: 1rem;
+		margin-top: -0.625em;
+	}
+	&-upper {
+		@include Dosis(500, 0.9rem);
+		vertical-align: top;
+		position: relative;
+		top: 1rem;
+		margin-top: -0.625em;
+	}
+	&-lower {
+		@include Dosis(500, 0.9rem);
+		vertical-align: bottom;
+		position: relative;
+		top: 1rem;
+		margin-top: -0.625em;
+	}
+	&-point {
+		padding: 0.5rem 0;
+		border-bottom: 1px dashed rgba(128, 128, 128, 0.5);
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		@include Roboto(300, 0.8rem);
+	}
+	&-point_first {
+		margin-top: 40px;
+	}
+	&-point_last {
+		margin-bottom: 54px;
+	}
+	&-point:last-of-type {
+		background: red;
+	}
+	&-free-trial {
+		margin-bottom: 1rem;
+		color: rgba(128, 128, 128, 0.7);
+		@include Roboto(300, 0.9em);
+	}
+	&-btn {
+		@include Roboto(500, 1rem);
+		background: #fff;
+		padding: 7px 30px;
+		border-radius: 50px;
+		cursor: pointer;
+		margin-bottom: 40px;
+	}
+}
+
+.order-item:hover .order-five-corner,
+.order-item:hover .order-btn {
+	color: #fff;
+	background: -webkit-gradient(linear, left top, right top, from(#ff6633), to(#ff3366));
+	background: -webkit-linear-gradient(left, #ff6633, #ff3366);
+	background: -o-linear-gradient(left, #ff6633, #ff3366);
+	background: linear-gradient(to right, #ff6633, #ff3366);
+}
+
+.order-item:hover,
+.order-item:hover .order-btn {
+	-webkit-box-shadow: 0 0 21px 0 grey;
+	box-shadow: 0 0 21px 0 grey;
+}
+
+@supports (display: flex) {
+	.order-wrap {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-pack: distribute;
+		justify-content: space-around;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+}

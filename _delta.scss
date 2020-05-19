@@ -1,0 +1,96 @@
+.delta::before {
+	content: '';
+	display: block;
+	width: 362px;
+	height: 469px;
+	position: absolute;
+	z-index: -2;
+	background: url(img/mob-2.png) left/contain no-repeat;
+}
+
+.delta {
+	@include centro(80%, 1200px);
+	height: 700px;
+	position: relative;
+}
+
+
+.delta::after {
+	display: block;
+	width: 52%;
+	height: 1px;
+	position: absolute;
+	top: 531px;
+	left: -1vw;
+	content: "";
+	-webkit-transform: skew(-41deg, -5deg);
+	-ms-transform: skew(-41deg, -5deg);
+	transform: skew(-41deg, -5deg);
+	-webkit-box-shadow: 7px 61px 60px 0px rgba(0, 0, 0, 0.6);
+	box-shadow: 7px 61px 60px 0px rgba(0, 0, 0, 0.6);
+	border-bottom: 50px transparent solid;
+	border-right: 105px transparent solid;
+	border-radius: 100%;
+}
+
+.delta-img {
+	max-width: 30%;
+	float: left;
+}
+
+.leave {
+	width: 50%;
+	position: absolute;
+	right: 0;
+	padding-top: 20px;
+}
+
+.leave-heading {
+	margin-bottom: 1rem;
+	@include Dosis(500, 1.5rem);
+}
+
+.leave-text-1,
+.leave-text-2 {
+	@include Roboto(300, 0.7rem);
+	color: rgba(128, 128, 128, 0.5);
+	line-height: 1.5;
+}
+
+.leave-text-1 {
+	margin-bottom: 34px;
+}
+
+.leave-text-2 {
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+.leave::before {
+	/*	display: block;
+	content: '';
+	height: 10px;
+	width: 550px;
+	background: black;*/
+}
+
+@media screen and (max-width: 750px) {
+	.delta {
+		width: 99%;
+		&__img {
+			display: none;
+		}
+		&::before {
+			display: none;
+		}
+		&::after {
+			display: none;
+		}
+	}
+	.leave {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+}
+
