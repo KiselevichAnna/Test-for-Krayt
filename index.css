@@ -454,13 +454,6 @@
     display: inline-block;
 }
 
-.leave::before {
-    /*	display: block;
-  content: '';
-  height: 10px;
-  width: 550px;
-  background: black;*/
-}
 
 @media screen and (max-width: 750px) {
     .delta {
@@ -641,7 +634,7 @@
     position: absolute;
     bottom: 300px;
     background: #fff;
-    z-index: 10;
+    
 }
 
 .slider-btn:hover {
@@ -1156,7 +1149,7 @@ video.video {
     box-shadow: 0 5px 15px 0 #000;
 }
 
-.giant-now__div {
+.giant-now-div {
     width: 64%;
     padding-top: 0.5rem;
     float: right;
@@ -1169,7 +1162,7 @@ video.video {
     font-size: 1rem;
 }
 
-.giant-now-div-txt {
+.giant-now-div-text {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 0.6rem;
